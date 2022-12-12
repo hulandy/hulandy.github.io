@@ -33,11 +33,11 @@
 title: Invisible Moon
 order: 1
 subtitle: “我们可以卑微如尘土，不能扭曲如蛆虫。” 
-description: >- Nothing but somewhat bullshit. -<
+description: 
 
 # You'll want to customize url and baseurl for your own site:
-baseurl: blog.gejing.org # the subpath of your site, e.g. /blog
-url: www.gejing.org # the base hostname & protocol for your site
+baseurl:  # the subpath of your site, e.g. /blog
+url:  # the base hostname & protocol for your site
 
 # Social settings
 # Make sure to include the full url including protocol, e.g. https://github.com/chrisbobbe
