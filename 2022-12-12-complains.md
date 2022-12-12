@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "This is my first blog post"
-author: Vinish
-categories: [ tutorial ]
+title:  "Some complains"
+author: GJFPV
+categories: [ somewhat ]
 ---
 ---
 layout: post
