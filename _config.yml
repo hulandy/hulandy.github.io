@@ -30,7 +30,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Invisible Moon
+title: Changes
 subtitle: “我们可以卑微如尘土，不能扭曲如蛆虫。”
 description: >- Nothing but somewhat bullshit. -<
 
