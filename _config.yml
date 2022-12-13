@@ -35,9 +35,9 @@ title: Invisible Moon
 subtitle: “我们可以卑微如尘土，不能扭曲如蛆虫。”
 description: >- # this means to ignore newlines until "baseurl:"
   Nothing but some what bullshe.
-author: "hulandy"
-email: "me@gejing.org"
-avatar: "assets/images/avatar.jpg"
+author: hulandy
+email: me@gejing.org
+avatar: assets/images/avatar.jpg
 
 # You'll want to customize url and baseurl for your own site:
 baseurl: " " # the subpath of your site, e.g. /blog
