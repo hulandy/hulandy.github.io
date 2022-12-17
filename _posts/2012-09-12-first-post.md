@@ -4,6 +4,7 @@ author: Isaac G
 layout: post
 ---
 
+
 To my dear son
 
 Hi. First of all, this is not a death note to say goodbye, just to be clear. The reason that I'd like to share with you this is because that these minds appeared several times, and I think I have to do it eventually.
