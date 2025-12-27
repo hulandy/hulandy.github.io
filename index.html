@@ -3,48 +3,2078 @@
 <head>
     <meta charset="utf-8">
     <title>Hulandy's Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body { font-family: sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; }
-        a { color: #0366d6; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .post-list { margin-top: 40px; }
-        .post-item { margin: 20px 0; padding: 15px; border-left: 3px solid #eee; }
-        .post-date { color: #666; font-size: 0.9em; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #24292e;
+            background: #fff;
+        }
+        header {
+            border-bottom: 1px solid #e1e4e8;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #24292e;
+        }
+        .subtitle {
+            color: #6a737d;
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+        .stats {
+            background: #f6f8fa;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+            font-size: 0.95em;
+            border-left: 4px solid #0366d6;
+        }
+        .post-list {
+            margin: 30px 0;
+        }
+        .post-item {
+            margin: 25px 0;
+            padding: 25px;
+            border: 1px solid #e1e4e8;
+            border-radius: 8px;
+            background: #fafbfc;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+        .post-item:hover {
+            border-color: #0366d6;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transform: translateY(-3px);
+        }
+        .post-title {
+            margin: 0 0 10px 0;
+            font-size: 1.4em;
+        }
+        .post-title a {
+            color: #24292e;
+            text-decoration: none;
+            display: block;
+        }
+        .post-title a:hover {
+            color: #0366d6;
+        }
+        .post-meta {
+            color: #6a737d;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .post-date {
+            background: #e1e4e8;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.85em;
+        }
+        .post-category {
+            color: #0366d6;
+            font-weight: 500;
+        }
+        .post-excerpt {
+            color: #444;
+            margin: 15px 0;
+            line-height: 1.5;
+        }
+        .read-more {
+            display: inline-block;
+            color: #0366d6;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border: 1px solid #0366d6;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+        .read-more:hover {
+            background: #0366d6;
+            color: white;
+        }
+        .year-section {
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e1e4e8;
+            font-size: 1.5em;
+            color: #24292e;
+        }
+        .no-posts {
+            text-align: center;
+            padding: 50px;
+            color: #6a737d;
+            border: 2px dashed #e1e4e8;
+            border-radius: 8px;
+            background: #fafbfc;
+            font-size: 1.1em;
+        }
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eaeaea;
+            color: #6a737d;
+            font-size: 0.9em;
+            text-align: center;
+        }
+        .archive-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #0366d6;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        @media (max-width: 600px) {
+            body { padding: 15px; }
+            h1 { font-size: 2em; }
+            .post-item { padding: 20px; }
+        }
     </style>
 </head>
 <body>
-    <h1>Hulandy's Blog</h1>
-    <p>从 WordPress 迁移的静态博客</p>
+    <header>
+        <h1>Hulandy's Blog</h1>
+        <p class="subtitle">知识分享 • 技术笔记 • 生活记录</p>
+    </header>
     
-    <h2>最新文章</h2>
-    <div id="post-list" class="post-list">
-        <p>正在加载文章...</p>
+    <div class="stats">
+        📊 统计: 共 <strong id="total-count">126</strong> 篇文章，覆盖 <strong id="year-count">1</strong> 个年份
+    </div>
+    <div class='post-list'>
+        <h2 class='year-section'>📅 未分类 年 (126 篇)</h2>
+<div class='post-item'>
+            <h3 class='post-title'><a href='posts/2023/05/2023-05-31-257/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "FPV"
+date: 2023-05-31
+categories:
+- "fpv"
+---
+
+Categories：FPV May 31, 2023
+
+随着数字图传的性能越来越好，FPV的入门也</p>
+            <a href='posts/2023/05/2023-05-31-257/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2023/12/2023-12-05-253/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "图传系统总结"
+date: 2023-12-05
+categories:
+- "fpv"
+---
+
+![405491113_1077249653292422_6365736064413115025_n.jpg](images/2751059628</p>
+            <a href='posts/2023/12/2023-12-05-253/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2023/08/2023-08-27-256/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "肥鲨高清眼镜用后感"
+date: 2023-08-27
+categories:
+- "fpv"
+---
+
+Categories：FPV August 27, 2023
+
+补充一个肥鲨高清眼镜</p>
+            <a href='posts/2023/08/2023-08-27-256/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2023/08/2023-08-28-255/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "The notice of Hdzero on ardupilot"
+date: 2023-08-28
+categories:
+- "fpv"
+---
+
+Categories：FPV August 28, 2023
+
+When we first setup our</p>
+            <a href='posts/2023/08/2023-08-28-255/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2015/06/2015-06-25-我的飞控/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "我的飞控"
+date: 2015-06-25
+---
+
+终于把Minix贱卖了。这个飞控怎么调都不稳，我不会认为这是电机和机架的问�</p>
+            <a href='posts/2015/06/2015-06-25-我的飞控/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2015/06/2015-06-08-热水器水流传感器/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "热水器水流传感器"
+date: 2015-06-08
+---
+
+热水器打不着火了，排查之后应该是水流传感器故障。售后上门太贵</p>
+            <a href='posts/2015/06/2015-06-08-热水器水流传感器/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2015/05/2015-05-13-x9d第一印象/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "X9D第一印象"
+date: 2015-05-13
+---
+
+终于入了X9D，工业设计党也不得不向迫切的需求低头：唯一一个所有按键可</p>
+            <a href='posts/2015/05/2015-05-13-x9d第一印象/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2015/05/2015-05-12-cc3d刷cleanflight单一模式/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "CC3D刷CleanFlight单一模式"
+date: 2015-05-12
+---
+
+和使用FTDI更新CC3D的BL是一样的，教程参考官方：[openpilot](https://</p>
+            <a href='posts/2015/05/2015-05-12-cc3d刷cleanflight单一模式/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2015/10/2015-10-03-peon230炸碎-2/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "peon230"
+date: 2015-10-03
+---
+
+十一假期在刚收的玉米地里飞一把。 正飞得舒服眼镜电池报警了,.想摘了BB继续飞</p>
+            <a href='posts/2015/10/2015-10-03-peon230炸碎-2/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2015/10/2015-10-03-peon230炸碎/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "peon230炸碎"
+date: 2015-10-03
+---
+
+十一假期心情舒畅，在刚收了的玉米地里飞一把。 正飞得舒服眼镜电池报警�</p>
+            <a href='posts/2015/10/2015-10-03-peon230炸碎/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2015/01/2015-01-18-ssd-pci-bracket/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "ssd pci bracket"
+date: 2015-01-18
+---
+
+easy to use
+
+[![IMG_3232.JPG](images/IMG_3232.jpg)](http://gejing.org/wp-content/uploads/2015/0</p>
+            <a href='posts/2015/01/2015-01-18-ssd-pci-bracket/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2015/01/2015-01-22-laser-diode-torch/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "Laser diode torch"
+date: 2015-01-22
+---
+
+With a 5v laser diode<[taobao](http://detail.tmall.com/item.htm?id=39348062641&mt= "taobao")\> ,</p>
+            <a href='posts/2015/01/2015-01-22-laser-diode-torch/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2015/01/2015-01-18-im-so-fucking-good/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "Im so fucking good"
+date: 2015-01-18
+---
+
+fixed my student's phone
+
+[![IMG_3153.JPG](images/IMG_3153.jpg)](http://gejing.org/wp-conten</p>
+            <a href='posts/2015/01/2015-01-18-im-so-fucking-good/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2015/12/2015-12-27-moto系列手机logo制作工具/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "moto系列手机LOGO制作工具"
+date: 2015-12-27
+---
+
+[MotoBootLogoMaker](http://gejing.org/uncategorized/moto%e7%b3%bb%e5%88%97%e6%89%8</p>
+            <a href='posts/2015/12/2015-12-27-moto系列手机logo制作工具/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2015/12/2015-12-07-重新锁定bl解锁的moto-x-style/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "恢复MOTO X STYLE的BOOTLOADER解锁状态"
+date: 2015-12-07
+---
+
+**_虽然界面可以做到完美锁定状态，但不代表MOTO官方�</p>
+            <a href='posts/2015/12/2015-12-07-重新锁定bl解锁的moto-x-style/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2015/09/2015-09-21-关于神控cc3d/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "关于神控CC3D"
+date: 2015-09-21
+---
+
+提到“神”字，扯远一点：智能手机早期的PPC时代，有一款HTC的……实在�</p>
+            <a href='posts/2015/09/2015-09-21-关于神控cc3d/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2015/11/2015-11-13-199/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+date: 2015-11-13
+---
+
+Hi，我正在使用百度云，给大家分享"ss283.apk"，快来看看吧~[http://pan.baidu.com/share/link?shareid=p33434</p>
+            <a href='posts/2015/11/2015-11-13-199/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2015/11/2015-11-14-118/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "About G"
+date: 2015-11-14
+categories:
+- "default"
+---
+
+Nightly 2.8.3</p>
+            <a href='posts/2015/11/2015-11-14-118/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2015/11/2015-11-14-204/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+date: 2015-11-14
+---
+
+[![image](images/wpid-wp-1447544454057.jpg "wpid-wp-1447544454057.jpg")](http://gejing.org/wp-content/uploads/2015/11/wpid-w...</p>
+            <a href='posts/2015/11/2015-11-14-204/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2015/07/2015-07-06-rctimer-bl20a-mini-dys-sn20-1wire/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "Rctimer BL20a mini dys sn20 1wire"
+date: 2015-07-06
+---
+
+用我的Mega2560尝试了无数次都无法连接，这款电调已经确认是s</p>
+            <a href='posts/2015/07/2015-07-06-rctimer-bl20a-mini-dys-sn20-1wire/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2015/07/2015-07-30-无人机摄影大赛/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "“无人机摄影大赛”"
+date: 2015-07-30
+---
+
+今天麦子发给我一个关于国内搞的“无人机摄影大赛”的链接。
+
+�</p>
+            <a href='posts/2015/07/2015-07-30-无人机摄影大赛/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2015/07/2015-07-13-真鸡巴帅-2/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "totally cool"
+date: 2015-07-13
+---
+
+ [![](images/IMG_4389.jpg)](http://gejing.org/wp-content/uploads/2015/07/IMG_4389.jpg)</p>
+            <a href='posts/2015/07/2015-07-13-真鸡巴帅-2/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2015/07/2015-07-13-真鸡巴帅/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "真鸡巴帅"
+date: 2015-07-13
+---
+
+ [![](images/IMG_4389.jpg)](http://gejing.org/wp-content/uploads/2015/07/IMG_4389.jpg)</p>
+            <a href='posts/2015/07/2015-07-13-真鸡巴帅/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2015/07/2015-07-02-头像/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "头像"
+date: 2015-07-02
+---
+
+[![IMG_4252](images/IMG_42521.jpg)](http://gejing.org/wp-content/uploads/2015/07/IMG_42521.jpg) [![](images</p>
+            <a href='posts/2015/07/2015-07-02-头像/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2015/03/2015-03-07-fly-filed/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "Fly filed"
+date: 2015-03-07
+---
+
+When I was testing my new sparky flight controller with the GPS yesterday, several kids are surround with...</p>
+            <a href='posts/2015/03/2015-03-07-fly-filed/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2015/03/2015-03-17-fpv穿越最新动态/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "FPV穿越最新动态"
+date: 2015-03-17
+---
+
+FPV穿越圈作为航模界最时髦的一个分支，可谓魅力十足。自从澳大利亚</p>
+            <a href='posts/2015/03/2015-03-17-fpv穿越最新动态/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2015/08/2015-08-30-cleanflight-cli/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "Cleanflight CLI"
+date: 2015-08-30
+---
+
+其实cc3d飞控用cp2102联机目前已经很完美了，没有发现什么bug。今天继续测�</p>
+            <a href='posts/2015/08/2015-08-30-cleanflight-cli/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2015/02/2015-02-12-dominator-hd/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "Dominator HD"
+date: 2015-02-12
+---
+
+很无奈，这眼镜不太适合我宽阔的脸颊，aio是没有这个问题的。 Dominator hd does</p>
+            <a href='posts/2015/02/2015-02-12-dominator-hd/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2015/02/2015-02-04-爱国者/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "爱国者"
+date: 2015-02-04
+---
+
+很多时候我们明白一件事，平时却很少注意。在大脑不够清醒，比如刚刚被酒精</p>
+            <a href='posts/2015/02/2015-02-04-爱国者/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2015/04/2015-04-16-改造kim400/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "改造kim400"
+date: 2015-04-16
+---
+
+年前贪图便宜入了xa的新飞控minix，最近考驾照过二科后开始试飞，读取log发�</p>
+            <a href='posts/2015/04/2015-04-16-改造kim400/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2015/04/2015-04-26-记一次提控回家/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "记一次“提控回家”"
+date: 2015-04-26
+---
+
+<del>妈蛋可恶的瞎逼老头！</del>
+
+ 
+
+ </p>
+            <a href='posts/2015/04/2015-04-26-记一次提控回家/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2017/06/2017-06-02-156/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "Ssr"
+date: 2017-06-02
+categories:
+- "default"
+---
+
+The latest official version for pc:
+
+xp win7: [Ss.zip](http://www.gejing.org/usr/upl</p>
+            <a href='posts/2017/06/2017-06-02-156/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2017/06/2017-06-26-159/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "RemzibiOSD For Naza"
+date: 2017-06-26
+categories:
+- "fpv"
+---
+
+I tied to use an old OSD board (shortened by on-screen display) with my</p>
+            <a href='posts/2017/06/2017-06-26-159/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2017/06/2017-06-01-150/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "Dell d630 with Sierra hackintosh microphone tuning"
+date: 2017-06-01
+categories:
+- "hack"
+---
+
+Thanks to this entire manual I could ins</p>
+            <a href='posts/2017/06/2017-06-01-150/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2017/05/2017-05-10-142/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "OS X优盘制作命令"
+date: 2017-05-10
+categories:
+- "hack"
+---
+
+sudo /Applications/Install\\ macOS\\ Sierra.app/Contents/Resources/c</p>
+            <a href='posts/2017/05/2017-05-10-142/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2017/05/2017-05-30-143/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "Install a MTK7601 chip based usb Wi-Fi stick on Sierra"
+date: 2017-05-30
+categories:
+- "hack"
+---
+
+In my case, the USB wireless adapter</p>
+            <a href='posts/2017/05/2017-05-30-143/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2017/10/2017-10-07-169/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "Hackintosh"
+date: 2017-10-07
+categories:
+- "hack"
+---
+
+我有个500G自组的移动硬盘，USB3接口。其中一个分区是老笔记</p>
+            <a href='posts/2017/10/2017-10-07-169/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2017/07/2017-07-10-163/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "How to use arduino UNO  Flash BLHELI to a turnigy plush 18a esc"
+date: 2017-07-10
+categories:
+- "default"
+---
+
+I wish I had coding skil</p>
+            <a href='posts/2017/07/2017-07-10-163/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2017/04/2017-04-07-141/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "[转]修改ALC系列声卡的插孔定义"
+date: 2017-04-07
+categories:
+- "default"
+---
+
+转贴，有时互联网的文章会消失。</p>
+            <a href='posts/2017/04/2017-04-07-141/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2021/10/2021-10-23-209/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "一些错误更新"
+date: 2021-10-23
+categories:
+- "fpv"
+---
+
+之前信誓旦旦地说F4电调很牛逼，但尴尬的是目前HOLYBRO�</p>
+            <a href='posts/2021/10/2021-10-23-209/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2021/09/2021-09-06-208/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "FPV入门需要的准备工作"
+date: 2021-09-06
+categories:
+- "fpv"
+---
+
+我们再来回顾一下之前说过的核心内容。如果�</p>
+            <a href='posts/2021/09/2021-09-06-208/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2021/07/2021-07-30-203/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "FPV经验分享之飞控"
+date: 2021-07-30
+categories:
+- "fpv"
+---
+
+这是经验分享的第一篇，接下来会聊其它装备。当�</p>
+            <a href='posts/2021/07/2021-07-30-203/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2021/07/2021-07-30-204-2/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "聊聊电装-飞控和电调"
+date: 2021-07-30
+categories:
+- "fpv"
+---
+
+想面向刚接触FPV的模友介绍一下目前市面上的飞</p>
+            <a href='posts/2021/07/2021-07-30-204-2/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2021/08/2021-08-05-264/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "模拟还是数字"
+date: 2021-08-05
+categories:
+- "fpv"
+---
+
+Categories：FPV August 5, 2021
+
+总算下决心购置了一套DJI V2，�</p>
+            <a href='posts/2021/08/2021-08-05-264/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2021/08/2021-08-16-207/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "FPV入门"
+date: 2021-08-16
+categories:
+- "fpv"
+---
+
+从个人角度说下如何入门FPV。
+
+前提：初中程度的物理知识，�</p>
+            <a href='posts/2021/08/2021-08-16-207/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2021/08/2021-08-05-205/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "模拟还是数字"
+date: 2021-08-05
+categories:
+- "fpv"
+---
+
+总算下决心购置了一套DJI V2，外加两套polar和两套air unit</p>
+            <a href='posts/2021/08/2021-08-05-205/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2021/08/2021-08-10-263/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "再试数字图传"
+date: 2021-08-10
+categories:
+- "fpv"
+---
+
+Categories：FPV August 10, 2021
+
+发现我真的没有办法像飞模拟</p>
+            <a href='posts/2021/08/2021-08-10-263/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2021/08/2021-08-10-206/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "再试数字图传"
+date: 2021-08-10
+categories:
+- "fpv"
+---
+
+发现我真的没有办法像飞模拟那样飞数字图传，应该是�</p>
+            <a href='posts/2021/08/2021-08-10-206/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2025/03/2025-03-04-278/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "在Radxa Zero 3上运行deepseek"
+date: 2025-03-04
+categories:
+- "linux"
+---
+
+在Zero上编译非常痛苦，所以使用交叉编译�</p>
+            <a href='posts/2025/03/2025-03-04-278/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2025/08/2025-08-24-how-to-configure-a-quectel-ec20-lte-module-on-your-ssc338q-camera-for-remote-access/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "How to Configure a Quectel EC20 LTE Module on Your SSC338Q Camera for Remote Access"
+date: 2025-08-24
+categories:
+- "fpv"
+---
+
+If you'r</p>
+            <a href='posts/2025/08/2025-08-24-how-to-configure-a-quectel-ec20-lte-module-on-your-ssc338q-camera-for-remote-access/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2025/08/2025-08-19-a-complain-about-fpv/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "A complain about FPV"
+date: 2025-08-19
+---
+
+Looking back, the FPV hobby has been through so many ups and downs. Yeah, I feel like ranting</p>
+            <a href='posts/2025/08/2025-08-19-a-complain-about-fpv/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2025/02/2025-02-28-277/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "Radxa 3w zero connect wifi before login"
+date: 2025-02-28
+categories:
+- "linux"
+---
+
+So here is the thing:
+I want to use one of my ra</p>
+            <a href='posts/2025/02/2025-02-28-277/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2025/04/2025-04-20-fpv-over-celluar/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "FPV over Celluar"
+date: 2025-04-20
+categories:
+- "fpv"
+---
+
+![](images/20250420_171729.jpg)
+
+If you're looking for a cellular-based FPV</p>
+            <a href='posts/2025/04/2025-04-20-fpv-over-celluar/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2024/06/2024-06-09-270/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "About DJI goggles 2"
+date: 2024-06-09
+categories:
+- "fpv"
+- "mood"
+---
+
+There are a lot of reviews and opinions regard this product.</p>
+            <a href='posts/2024/06/2024-06-09-270/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2024/06/2024-06-09-259/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "关于图传的一点牢骚"
+date: 2024-06-09
+categories:
+- "default"
+---
+
+Categories：随便写写 February 21, 2022
+
+自从大疆整</p>
+            <a href='posts/2024/06/2024-06-09-259/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2024/06/2024-06-09-262/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "FPV入门"
+date: 2024-06-09
+categories:
+- "default"
+---
+
+Categories：FPV August 16, 2021
+
+从个人角度说下如何入门FPV。</p>
+            <a href='posts/2024/06/2024-06-09-262/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2024/06/2024-06-09-260/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "一些错误更新"
+date: 2024-06-09
+categories:
+- "default"
+---
+
+Categories：FPV October 23, 2021
+
+之前信誓旦旦地说F4电调�</p>
+            <a href='posts/2024/06/2024-06-09-260/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2024/06/2024-06-09-261/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "FPV入门需要的准备工作"
+date: 2024-06-09
+categories:
+- "default"
+---
+
+Categories：FPV September 6, 2021
+
+我们再来回顾一</p>
+            <a href='posts/2024/06/2024-06-09-261/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2024/10/2024-10-04-272/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "My gears"
+date: 2024-10-04
+categories:
+- "fpv"
+---
+
+![mmexport1728046984387.jpg](images/3693744392.jpg "mmexport1728046984387.jpg")
+
+�</p>
+            <a href='posts/2024/10/2024-10-04-272/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2024/09/2024-09-18-271/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "4G"
+date: 2024-09-18
+categories:
+- "fpv"
+---
+
+apt-get update
+apt-get install -y socat</p>
+            <a href='posts/2024/09/2024-09-18-271/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2024/03/2024-03-18-268/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "fdas"
+date: 2024-03-18
+categories:
+- "default"
+---
+
+fdafds![Screenshot 2024-03-18 182115.png](images/1115075083.png "Screenshot 2024-03</p>
+            <a href='posts/2024/03/2024-03-18-268/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2024/03/2024-03-30-269/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "Feihualianpian"
+date: 2024-03-30
+categories:
+- "default"
+---
+
+那盏灯终于还是灭了。起初以为只是舱门的开关没有弹�</p>
+            <a href='posts/2024/03/2024-03-30-269/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2024/02/2024-02-10-265/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "龙年大吉恭喜发财"
+date: 2024-02-10
+categories:
+- "mood"
+---
+
+意外总是在不经意间发生，我两下点击误删掉了大</p>
+            <a href='posts/2024/02/2024-02-10-265/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2013/06/2013-06-26-40/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "minimosd用于MWC的固件KVTEAMOSD"
+date: 2013-06-26
+categories:
+- "fpv"
+---
+
+原本买MINIOSD用在海盗固件上的，结果找到�</p>
+            <a href='posts/2013/06/2013-06-26-40/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2013/05/2013-05-19-39/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "飞行失败"
+date: 2013-05-19
+categories:
+- "fpv"
+---
+
+自制的山寨3S平衡充（6块5V1A的充电器并起来）有一个端口的</p>
+            <a href='posts/2013/05/2013-05-19-39/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2013/10/2013-10-28-66/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "撸妹1020进阶感受"
+date: 2013-10-28
+categories:
+- "default"
+---
+
+尝试1020已经一个星期了，大体上这并不是一部综�</p>
+            <a href='posts/2013/10/2013-10-28-66/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2013/10/2013-10-17-63/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "nokia lumia 1020直接感受"
+date: 2013-10-17
+categories:
+- "default"
+---
+
+前天下午收到了撸妹1020，万分期待地打开包�</p>
+            <a href='posts/2013/10/2013-10-17-63/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2013/01/2013-01-27-3/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "安装了TypeCho"
+date: 2013-01-27
+categories:
+- "mood"
+---
+
+折腾了一天。我把它默认解压在根目录的build内，后台无</p>
+            <a href='posts/2013/01/2013-01-27-3/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2013/01/2013-01-31-22/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "raspi"
+date: 2013-01-31
+categories:
+- "raspi"
+---
+
+树梅派做我这种无流量自娱自乐型主页真是太爽了。前两天很少</p>
+            <a href='posts/2013/01/2013-01-31-22/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2013/09/2013-09-16-60/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "mwc海盗安卓蓝牙地面站"
+date: 2013-09-16
+categories:
+- "fpv"
+---
+
+漫长的等待，海盗终于追上了apm的步伐，推出3</p>
+            <a href='posts/2013/09/2013-09-16-60/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2013/07/2013-07-02-43/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "写了点玩四旋翼的经历"
+date: 2013-07-02
+categories:
+- "fpv"
+---
+
+，凑合看吧。
+[http://bbs.5imx.com/bbs/forum.php?mod=v</p>
+            <a href='posts/2013/07/2013-07-02-43/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2013/07/2013-07-02-42/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "k"
+date: 2013-07-02
+categories:
+- "mood"
+---
+
+我觉得“正能量”和“劣根性”一样是很扯淡的东西,那只能说明人�</p>
+            <a href='posts/2013/07/2013-07-02-42/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2013/08/2013-08-05-44/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "arduino+w5100+dht11+Sharp’s GP2Y1010AU0F"
+date: 2013-08-05
+categories:
+- "arduino"
+---
+
+第二块红板AIOP飞控的USB口被我插�</p>
+            <a href='posts/2013/08/2013-08-05-44/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2013/08/2013-08-15-55/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "不用卡套还原恢复NANO SIM卡的方法"
+date: 2013-08-15
+categories:
+- "default"
+---
+
+同理也适用于恢复成标准SIM卡或�</p>
+            <a href='posts/2013/08/2013-08-15-55/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2013/02/2013-02-05-23/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "how to shutdown your raspberry pi"
+date: 2013-02-05
+categories:
+- "raspi"
+---
+
+there are 4 different ways： sudo shutdown -h now sudo</p>
+            <a href='posts/2013/02/2013-02-05-23/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2013/02/2013-02-12-26/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "春节"
+date: 2013-02-12
+categories:
+- "default"
+---
+
+这真是一个令我感到尴尬的节日。虽然我也非常热衷于“回家</p>
+            <a href='posts/2013/02/2013-02-12-26/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2013/04/2013-04-28-34/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "新四旋翼机架"
+date: 2013-04-28
+categories:
+- "fpv"
+---
+
+SK450机架在意外中一只机臂损毁了，用dell D630笔记本的A�</p>
+            <a href='posts/2013/04/2013-04-28-34/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2019/06/2019-06-28-192/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "Delete a NVROM entry[reference]"
+date: 2019-06-28
+categories:
+- "linux"
+---
+
+The EFI version 2 shell provides a command called bcfg tha</p>
+            <a href='posts/2019/06/2019-06-28-192/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2019/05/2019-05-21-191/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "cannot open serial ttyACM0 on ubuntu"
+date: 2019-05-21
+categories:
+- "fpv"
+---
+
+sudo usermod -a -G dialout
+
+firmware:</p>
+            <a href='posts/2019/05/2019-05-21-191/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2019/10/2019-10-20-193/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "BetaFlight 固件功能定制"
+date: 2019-10-20
+categories:
+- "fpv"
+---
+
+警告
+某些功能组合起来可能会导致编译失败�</p>
+            <a href='posts/2019/10/2019-10-20-193/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2019/01/2019-01-17-186/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "Typecho出现数据库错误"
+date: 2019-01-17
+categories:
+- "linux"
+- "raspi"
+---
+
+前几天突然发现我的树莓派数据库服�</p>
+            <a href='posts/2019/01/2019-01-17-186/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2019/12/2019-12-24-197/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "Runo recorder"
+date: 2019-12-24
+categories:
+- "default"
+---
+
+![IMG_20191224_130459207~2.jpg![][1]](images/216829108.jpg "IMG_20191224_1</p>
+            <a href='posts/2019/12/2019-12-24-197/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2019/11/2019-11-18-194/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "Emuflight"
+date: 2019-11-18
+categories:
+- "fpv"
+---
+
+I just figured out that emu flight is a fantastic flight controller firmware. Alth</p>
+            <a href='posts/2019/11/2019-11-18-194/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2019/03/2019-03-06-190/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "虾米音乐和其它"
+date: 2019-03-06
+categories:
+- "default"
+---
+
+
+-</p>
+            <a href='posts/2019/03/2019-03-06-190/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2019/03/2019-03-03-188/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "Fixed my corrupted  database last night"
+date: 2019-03-03
+categories:
+- "linux"
+- "raspi"
+---
+
+For some reason, I turned off the powe</p>
+            <a href='posts/2019/03/2019-03-03-188/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2019/02/2019-02-23-187/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "Use a SMB directory on Apache2"
+date: 2019-02-23
+categories:
+- "linux"
+- "raspi"
+---
+
+Install samba client:</p>
+            <a href='posts/2019/02/2019-02-23-187/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2022/06/2022-06-30-213/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "继续YY"
+date: 2022-06-30
+categories:
+- "default"
+---
+
+肥鲨和蜗牛合作的高清已经上市～ 看了一些视频，发现它相</p>
+            <a href='posts/2022/06/2022-06-30-213/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2022/06/2022-06-25-212/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "Getting elder and.."
+date: 2022-06-25
+categories:
+- "mood"
+---
+
+虽然总觉得自己运气不好，但其实应该不算太坏，要�</p>
+            <a href='posts/2022/06/2022-06-25-212/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2022/05/2022-05-02-258/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "FPV入门之摄像头"
+date: 2022-05-02
+categories:
+- "fpv"
+---
+
+Categories：随便写写 May 2, 2022
+
+今天和一个F友聊摄像头</p>
+            <a href='posts/2022/05/2022-05-02-258/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2022/05/2022-05-02-211/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "FPV入门之摄像头"
+date: 2022-05-02
+categories:
+- "default"
+---
+
+今天和一个F友聊摄像头，他说他买了新暴龙，后�</p>
+            <a href='posts/2022/05/2022-05-02-211/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2022/07/2022-07-31-214/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "如何用F4飞控玩ardupilot固件"
+date: 2022-07-31
+categories:
+- "fpv"
+---
+
+一直在飞5寸穿越机，也较浅层面地体验了�</p>
+            <a href='posts/2022/07/2022-07-31-214/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2022/08/2022-08-05-215/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "编译Ardupilot会遇到的坑"
+date: 2022-08-05
+categories:
+- "fpv"
+---
+
+使用WINDOWS11，WSL2 - ubuntu22.04进行编译。
+
+需要�</p>
+            <a href='posts/2022/08/2022-08-05-215/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2022/08/2022-08-19-223/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "ss-libv"
+date: 2022-08-19
+categories:
+- "linux"
+---
+
+sudo snap install core
+
+sudo snap install shadowsocks-libev --edge</p>
+            <a href='posts/2022/08/2022-08-19-223/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2022/08/2022-08-08-216/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "Ardupilot Copter 4.1.5 firmware for BetaflightF4 controller"
+date: 2022-08-08
+categories:
+- "fpv"
+---
+
+Visit here for the latest: [http</p>
+            <a href='posts/2022/08/2022-08-08-216/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2022/08/2022-08-19-222/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "iptables"
+date: 2022-08-19
+categories:
+- "linux"
+---
+
+Base on debian:
+
+sudo apt update && sudo apt install -y ufw</p>
+            <a href='posts/2022/08/2022-08-19-222/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2022/02/2022-02-21-210/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "关于图传的一点牢骚"
+date: 2022-02-21
+categories:
+- "default"
+---
+
+自从大疆整出了数字图传，我整个人都不好了</p>
+            <a href='posts/2022/02/2022-02-21-210/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2018/12/2018-12-17-184/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "如何用diskpart为win10分区并使用DISM++装系统"
+date: 2018-12-17
+categories:
+- "default"
+---
+
+\*这一篇可以作为上一篇</p>
+            <a href='posts/2018/12/2018-12-17-184/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2018/12/2018-12-28-185/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "技嘉Brix BLPD5005使用感受"
+date: 2018-12-28
+categories:
+- "raspi"
+---
+
+用了几天这小东西感觉还行，除了我觉得价�</p>
+            <a href='posts/2018/12/2018-12-28-185/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2018/12/2018-12-17-183/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "我的GIGABYTE Brix BLPD-5005折腾记录"
+date: 2018-12-17
+categories:
+- "default"
+---
+
+早买早享受，晚买真特么便宜。899�</p>
+            <a href='posts/2018/12/2018-12-17-183/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2018/03/2018-03-28-171/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "Ssr"
+date: 2018-03-28
+categories:
+- "linux"
+---
+
+{
+"server":"12.34.56.78",
+"server\_ipv6":"::",</p>
+            <a href='posts/2018/03/2018-03-28-171/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2014/05/2014-05-07-80/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "域名解析服务器停机两天"
+date: 2014-05-07
+categories:
+- "default"
+---
+
+因服务商暂停了免费服务，我还在寻找新</p>
+            <a href='posts/2014/05/2014-05-07-80/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2014/05/2014-05-25-87/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "改光纤了"
+date: 2014-05-25
+categories:
+- "mood"
+---
+
+联通没把我拉下，因为是油田老住宅区所以进程显得慢了好</p>
+            <a href='posts/2014/05/2014-05-25-87/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2014/05/2014-05-11-83/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "DYNDNS"
+date: 2014-05-11
+categories:
+- "mood"
+---
+
+dyndns的优惠价很不错，可是暂时还不想付款。先用花生壳，但是</p>
+            <a href='posts/2014/05/2014-05-11-83/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2014/01/2014-01-01-67/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "dos的自我修养"
+date: 2014-01-01
+categories:
+- "default"
+---
+
+罗永浩，高晓松也算是屌丝的启蒙导师了，因为屌丝</p>
+            <a href='posts/2014/01/2014-01-01-67/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2014/01/2014-01-07-74/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "Split"
+date: 2014-01-07
+categories:
+- "mood"
+---
+
+把人民分成两帮，我不知道这是偶然还是故意。我在这里长大，�</p>
+            <a href='posts/2014/01/2014-01-07-74/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2014/01/2014-01-04-68/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "佳能cp900"
+date: 2014-01-04
+categories:
+- "default"
+---
+
+淘宝了个佳能cp900，小巧的热升华照片打印机，美版价格6x</p>
+            <a href='posts/2014/01/2014-01-04-68/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2014/01/2014-01-06-71/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "贺年卡"
+date: 2014-01-06
+categories:
+- "mood"
+---
+
+快过年了，想起小学时同学互送明信片的事来。虽说每次都会</p>
+            <a href='posts/2014/01/2014-01-06-71/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2014/12/2014-12-26-tmd-ive-even-no-time-to-twitterweibo/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "tmd I've even no time to twitter(weibo)"
+date: 2014-12-26
+---
+
+Waste the time. Need escape..
+
+[![IMG_3022.JPG](images/IMG_3022.jpg)](h</p>
+            <a href='posts/2014/12/2014-12-26-tmd-ive-even-no-time-to-twitterweibo/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2014/12/2014-12-20-3d-print-is-literally-changing-my-life/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "3D  print is literally changing my life"
+date: 2014-12-20
+---
+
+My new fpv moniter mount.
+
+[![IMG_2995.JPG](images/IMG_2995.jpg)](http:</p>
+            <a href='posts/2014/12/2014-12-20-3d-print-is-literally-changing-my-life/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2014/12/2014-12-13-wordpress/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "wordpress"
+date: 2014-12-13
+---
+
+换成wordpress最爽的一点是有手机客户端，随时打开发文章。之前的国产wordpress可</p>
+            <a href='posts/2014/12/2014-12-13-wordpress/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2014/12/2014-12-21-my-gillette-razor-mount/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "Gillette shaver and toothbrush holder"
+date: 2014-12-21
+---
+
+I used the 3M Tapes to mount it. You can download it at :[http://www.thingive...</p>
+            <a href='posts/2014/12/2014-12-21-my-gillette-razor-mount/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2014/12/2014-12-14-fpv-眼镜对比/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "FPV-眼镜对比"
+date: 2014-12-14
+---
+
+新上市的肥鲨HD显然是最好的选择。
+
+[![QQ图片20141214110133](images/QQ图片2014121</p>
+            <a href='posts/2014/12/2014-12-14-fpv-眼镜对比/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2014/12/2014-12-13-国家公祭日/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "国家公祭日"
+date: 2014-12-13
+---
+
+我们不应忘记反人类罪行，包括那些没有被列入国家公祭日的（你懂）。总</p>
+            <a href='posts/2014/12/2014-12-13-国家公祭日/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2014/11/2014-11-08-新的开始/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "新的开始"
+date: 2014-11-08
+---
+
+ 
+
+[![DSC_8664](images/DSC_8664-300x199.jpg)](http://gejing.org/wp-content/uploads/2014/11/DSC_8664.j</p>
+            <a href='posts/2014/11/2014-11-08-新的开始/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2014/11/2014-11-13-raspberry-pi/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "raspberry pi"
+date: 2014-11-13
+---
+
+这个小东西已经不间断的工作了两年，2013年的2月到现在。最新的B+版现在只�</p>
+            <a href='posts/2014/11/2014-11-13-raspberry-pi/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2014/11/2014-11-23-工行金邦达u盾在win8-1使用/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "工行金邦达u盾在win8.1使用"
+date: 2014-11-23
+---
+
+win8.1 64位系统使用金邦达u盾，经过工行不断升级，不知何时�</p>
+            <a href='posts/2014/11/2014-11-23-工行金邦达u盾在win8-1使用/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2014/03/2014-03-08-77/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "kim400 with rlink 433uhf minimosd&cc3d"
+date: 2014-03-08
+categories:
+- "fpv"
+---
+
+Lumenier团队的qav400真的即美型又实用，本</p>
+            <a href='posts/2014/03/2014-03-08-77/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2014/08/2014-08-19-116/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "站内图片无法显示的原因"
+date: 2014-08-19
+categories:
+- "default"
+---
+
+由于更换了域名地址，站内图片路径错误</p>
+            <a href='posts/2014/08/2014-08-19-116/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2016/10/2016-10-28-135/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "修改虚拟机网卡eth0"
+date: 2016-10-28
+categories:
+- "linux"
+---
+
+修改文件/etc/sysconfig/network-scripts/ifcfg-eth0中的MAC�</p>
+            <a href='posts/2016/10/2016-10-28-135/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2016/11/2016-11-03-138/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "DD&fdisk"
+date: 2016-11-03
+categories:
+- "linux"
+---
+
+fdisk和dd命令
+查看：
+$ sudo fdisk -u -l</p>
+            <a href='posts/2016/11/2016-11-03-138/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2016/11/2016-11-03-136/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "Mysql"
+date: 2016-11-03
+categories:
+- "linux"
+---
+
+**Error: MySQL - mysqldump: Got error: 1016: Can't open file: './exampledb/xxx.frm'</p>
+            <a href='posts/2016/11/2016-11-03-136/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2016/07/2016-07-13-130/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "ubuntu"
+date: 2016-07-13
+categories:
+- "linux"
+---
+
+如果你的apt-get有什么问题：
+sudo apt-get clean
+sudo apt-get autoremov</p>
+            <a href='posts/2016/07/2016-07-13-130/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2016/07/2016-07-12-129/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "CenOS7 shadowsocks"
+date: 2016-07-12
+categories:
+- "linux"
+---
+
+1. 安装 Shadowsocks
+
+Shell</p>
+            <a href='posts/2016/07/2016-07-12-129/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2016/07/2016-07-13-131/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "好记性不如烂键盘"
+date: 2016-07-13
+categories:
+- "linux"
+---
+
+CentOS6:
+
+添加iptables -A INPUT -p tcp --dport 6001 -j ACCEPT</p>
+            <a href='posts/2016/07/2016-07-13-131/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2016/03/2016-03-09-grub-rescue/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "grub rescue"
+date: 2016-03-09
+---
+
+很多时候，特别是在linux调整分区后，开机重启时会出现         error : unknow</p>
+            <a href='posts/2016/03/2016-03-09-grub-rescue/index.md' class='read-more'>阅读全文 →</a>
+        </div><div class='post-item'>
+            <h3 class='post-title'><a href='posts/2016/03/2016-03-26-2016同学聚会/index.md'>index</a></h3>
+            <div class='post-meta'>
+                <span class='post-date'>📅 未知日期</span>
+                <span class='post-category'>年份: 未分类</span>
+            </div>
+            <p class='post-excerpt'>---
+title: "2016同学聚会"
+date: 2016-03-26
+---
+
+[http://photo.163.com/utada\_jing/#m=1&aid=301214202&p=1](http://photo.163.com/utada_jing/#m=1&aid</p>
+            <a href='posts/2016/03/2016-03-26-2016同学聚会/index.md' class='read-more'>阅读全文 →</a>
+        </div>
     </div>
     
+    <footer>
+        <p>© 2024 Hulandy's Blog. 基于 GitHub Pages 构建。</p>
+        <p>使用 <a href="https://pages.github.com/" target="_blank">GitHub Pages</a> 和静态生成技术</p>
+        <a href="posts/" class="archive-link">📚 查看文章归档</a>
+    </footer>
+    
     <script>
-    // 动态加载文章列表
-    fetch('https://api.github.com/repos/hulandy/hulandy.github.io/contents/posts?ref=main')
-        .then(response => response.json())
-        .then(files => {
-            const postList = document.getElementById('post-list');
-            let html = '';
-            
-            files.forEach(file => {
-                if (file.name.endsWith('.md')) {
-                    const date = file.name.substring(0, 10);
-                    const title = file.name.substring(11).replace('.md', '').replace(/-/g, ' ');
-                    html += `
-                    <div class="post-item">
-                        <h3><a href="${file.download_url}">${title}</a></h3>
-                        <p class="post-date">${date}</p>
-                    </div>`;
-                }
+        // 添加一些交互效果
+        document.addEventListener('DOMContentLoaded', function() {
+            // 文章点击统计
+            const articles = document.querySelectorAll('.post-title a');
+            articles.forEach(article => {
+                article.addEventListener('click', function() {
+                    console.log('访问文章:', this.textContent);
+                });
             });
             
-            postList.innerHTML = html || '<p>暂无文章</p>';
-        })
-        .catch(error => {
-            document.getElementById('post-list').innerHTML = '<p>无法加载文章列表</p>';
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+            
+            // 随机颜色标签（可选）
+            const tags = document.querySelectorAll('.post-category');
+            const colors = ['#0366d6', '#28a745', '#6f42c1', '#d73a49', '#f66a0a'];
+            tags.forEach(tag => {
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                tag.style.color = color;
+            });
         });
     </script>
 </body>
