@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Hulandy's Blog</title>
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; }
+        a { color: #0366d6; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .post-list { margin-top: 40px; }
+        .post-item { margin: 20px 0; padding: 15px; border-left: 3px solid #eee; }
+        .post-date { color: #666; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <h1>Hulandy's Blog</h1>
+    <p>从 WordPress 迁移的静态博客</p>
+    
+    <h2>最新文章</h2>
+    <div id="post-list" class="post-list">
+        <p>正在加载文章...</p>
+    </div>
+    
+    <script>
+    // 动态加载文章列表
+    fetch('https://api.github.com/repos/hulandy/hulandy.github.io/contents/posts?ref=main')
+        .then(response => response.json())
+        .then(files => {
+            const postList = document.getElementById('post-list');
+            let html = '';
+            
+            files.forEach(file => {
+                if (file.name.endsWith('.md')) {
+                    const date = file.name.substring(0, 10);
+                    const title = file.name.substring(11).replace('.md', '').replace(/-/g, ' ');
+                    html += `
+                    <div class="post-item">
+                        <h3><a href="${file.download_url}">${title}</a></h3>
+                        <p class="post-date">${date}</p>
+                    </div>`;
+                }
+            });
+            
+            postList.innerHTML = html || '<p>暂无文章</p>';
+        })
+        .catch(error => {
+            document.getElementById('post-list').innerHTML = '<p>无法加载文章列表</p>';
+        });
+    </script>
+</body>
+</html>
